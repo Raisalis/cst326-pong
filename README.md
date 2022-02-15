@@ -1,2 +1,2 @@
-# CST326 Pong Game
-Pong Game made in Unity (Current done with Part 2)
+# CST326 Pong Game (Part 2 Finished)
+Pong Game made in Unity.
