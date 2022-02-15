@@ -43,9 +43,23 @@ public class ScoringManager : MonoBehaviour
             scoreText = textObject.GetComponent<TextMeshProUGUI>();
             scoreText.text = $"{player1score} - {player2score}";
         }
+        checkColor();
         checkWin(playernum, collision);
     }
 
+    // Changes color of text based on current score
+    void checkColor() {
+        if(player1score > player2score) {
+            scoreText = textObject.GetComponent<TextMeshProUGUI>();
+            scoreText.color = new Color32(255, 69, 69, 255);
+        } else if (player2score > player1score) {
+            scoreText = textObject.GetComponent<TextMeshProUGUI>();
+            scoreText.color = new Color32(100, 102, 255, 255);
+        } else {
+            scoreText = textObject.GetComponent<TextMeshProUGUI>();
+            scoreText.color = Color.white;
+        }
+    }
     // Checks if a player won the game. If not, spawns another ball.
     void checkWin(int playernum, Collider collision) {
         if(player1score == 11) {
