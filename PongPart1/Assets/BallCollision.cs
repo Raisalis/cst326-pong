@@ -8,6 +8,8 @@ public class BallCollision : MonoBehaviour
     public float speed = 20f;
     public float accel = .5f;
     public Transform[] spawnTransforms;
+    public AudioClip paddleSound;
+    public AudioClip wallSound;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,14 @@ public class BallCollision : MonoBehaviour
             Rigidbody ball = this.GetComponent<Rigidbody>();
             ball.AddForce(ball.velocity / 5, ForceMode.VelocityChange);
             ball.AddForce(direction * accel, ForceMode.Force);
+
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.clip = paddleSound;
+            audioSource.Play();
+        } else if(collision.gameObject.tag == "Wall") {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.clip = wallSound;
+            audioSource.Play();
         }
     }
 }
