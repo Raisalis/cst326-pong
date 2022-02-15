@@ -308,15 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0976941a4cf34248a276dd30e435cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  ballPrefab: {fileID: 578019711367959333, guid: d00afb652c828264198affff644d7ca9, type: 3}
-  speed: 10
-  player1mat: {fileID: 2100000, guid: 618dad24ae91f9e4a98f2f05086db3e1, type: 2}
-  player2mat: {fileID: 2100000, guid: db6b3d4ac57aef04dae430ce40fe07b5, type: 2}
-  topWall: {fileID: 726785404}
-  bottomWall: {fileID: 548372345}
-  textObject: {fileID: 1625323440}
   scoreSound: {fileID: 8300000, guid: f84c6ebb720751743a5b951242e2a80d, type: 3}
+  manager: {fileID: 1110399123}
 --- !u!65 &174717656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1225,6 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110399122}
+  - component: {fileID: 1110399123}
   m_Layer: 0
   m_Name: Scoring Manager
   m_TagString: Untagged
@@ -1247,6 +1241,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110399123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110399121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d16f58b771938459e78a97cb01574d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1625323442}
+  ballPrefab: {fileID: 578019711367959333, guid: d00afb652c828264198affff644d7ca9, type: 3}
+  speed: 5
+  player1mat: {fileID: 2100000, guid: 618dad24ae91f9e4a98f2f05086db3e1, type: 2}
+  player2mat: {fileID: 2100000, guid: db6b3d4ac57aef04dae430ce40fe07b5, type: 2}
+  topWall: {fileID: 726785404}
+  bottomWall: {fileID: 548372345}
+  textObject: {fileID: 1625323440}
+  scoreSound: {fileID: 8300000, guid: f84c6ebb720751743a5b951242e2a80d, type: 3}
 --- !u!1 &1234650614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,15 +1309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0976941a4cf34248a276dd30e435cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  ballPrefab: {fileID: 578019711367959333, guid: d00afb652c828264198affff644d7ca9, type: 3}
-  speed: 5
-  player1mat: {fileID: 2100000, guid: 618dad24ae91f9e4a98f2f05086db3e1, type: 2}
-  player2mat: {fileID: 2100000, guid: db6b3d4ac57aef04dae430ce40fe07b5, type: 2}
-  topWall: {fileID: 726785404}
-  bottomWall: {fileID: 548372345}
-  textObject: {fileID: 1625323440}
   scoreSound: {fileID: 8300000, guid: f84c6ebb720751743a5b951242e2a80d, type: 3}
+  manager: {fileID: 1110399123}
 --- !u!65 &1234650617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1914,6 +1922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5071139767908081042, guid: d00afb652c828264198affff644d7ca9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 578019711367959333, guid: d00afb652c828264198affff644d7ca9, type: 3}
       propertyPath: m_Name
       value: Ball
