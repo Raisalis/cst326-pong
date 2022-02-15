@@ -40,7 +40,7 @@ public class PaddleController : MonoBehaviour
             if(player1Down) {
                 //Debug.Log("Player 1 Buttons Pressed.");
                 //this.transform.Translate(0, 0, translation1);
-                paddlebody.velocity = new Vector3(0, 0, translation2);
+                paddlebody.velocity = new Vector3(0, 0, translation1);
             }
 
             if(player1Held) {
